@@ -1,6 +1,6 @@
 # LaTeX Template
 
-Status ![Build PDF](workflows/Build%20PDF/badge.svg)
+Status ![Build PDF](./workflows/Build%20PDF/badge.svg)
 
 ## Dependencies
 
