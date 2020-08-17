@@ -27,6 +27,7 @@ jobs:
       run: |
         sudo apt-get install make imagemagick texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
         sudo sed -i 's/<policy domain="coder" rights="none" pattern="PDF" \/>/<policy domain="coder" rights="read|write" pattern="PDF" \/>/g' /etc/ImageMagick-6/policy.xml
+        sudo sed -i 's/<policy domain="coder" rights="none" pattern="EPS" \/>/<policy domain="coder" rights="read|write" pattern="EPS" \/>/g' /etc/ImageMagick-6/policy.xml
     - name: Build
       run: |
         make build
