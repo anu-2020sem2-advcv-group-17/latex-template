@@ -1,5 +1,7 @@
 # LaTeX Template
 
+Status ![Build PDF](workflows/Build%20PDF/badge.svg)
+
 ## Dependencies
 
 * git
