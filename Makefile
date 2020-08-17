@@ -3,7 +3,7 @@ default: build preview
 build: generate_figures generate_pdf
 
 clean:
-	
+	git clean -xdf
 
 push:
 	git push origin master
@@ -14,7 +14,8 @@ preview:
 	bash ./scripts/open-pdf.sh
 
 generate_pdf:
-	pdflatex -interaction=nonstopmode main.tex out.pdf
+	pdflatex -interaction=nonstopmode main.tex out.pdf 
+	pdflatex -interaction=nonstopmode main.tex out.pdf # to build reference index
 
 generate_figures:
 	bash ./scripts/convert-images.sh
