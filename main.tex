@@ -1,0 +1,62 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{layouts}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage[section]{placeins}
+% \usepackage{subfig}
+% \usepackage{subfigure}
+\usepackage{subcaption}
+% \usepackage{subfloat}
+\usepackage{float}
+\usepackage[ddmmyyyy]{datetime}
+
+
+\lstset{
+    columns=fixed,       
+    numbers=none,
+    breaklines=true,
+    keywordstyle= \color{blue}
+    language=python
+}
+
+\newcommand{\question}[1]{\textbf{#1}\\}
+\newcommand{\cvimg}[3]{
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=#2\textwidth]{eps/#1.eps}
+        \caption{#3}
+        \label{fig:#1}
+    \end{figure}
+}
+
+\newenvironment{cvimggroup}[2]{
+    \begin{figure}[htbp]
+    \def\cvimggrouplabels{\caption{#2}\label{#1}}
+    \centering
+}{
+    \cvimggrouplabels
+    \end{figure}
+}
+
+
+\newcommand{\cvimgitem}[3]{
+    \begin{subfigure}[b]{#2\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{eps/#1.eps}
+        \caption{#3}
+        \label{fig:#1}
+    \end{subfigure}
+}
+
+\begin{document}
+
+\include{pages/hi}
+
+
+\end{document}
