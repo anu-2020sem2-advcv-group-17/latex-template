@@ -1,7 +1,8 @@
 # LaTeX Template
 
-## Requirements
+## Dependencies
 
+* git
 * make
 * pdflatex
 * convert (ImageMagick)
@@ -12,3 +13,8 @@
 make
 ```
 
+## Upload and Build
+
+```bash
+make push
+```
