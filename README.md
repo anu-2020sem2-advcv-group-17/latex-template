@@ -7,13 +7,19 @@
 * pdflatex
 * convert (ImageMagick)
 
-## Build
+## Build on macOS/Linux
 
 ```bash
 make
 ```
 
-## Upload and Build
+## Build on Windows
+
+Use Docker image "kaltzk/ubuntu-latex".
+
+## Upload and Build Files on GitHub Action
+
+(Every organization has 2000 free minutes for GitHub Action)
 
 ```bash
 make push
