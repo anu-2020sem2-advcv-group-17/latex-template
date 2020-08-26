@@ -14,8 +14,10 @@ preview:
 	bash ./scripts/open-pdf.sh
 
 generate_pdf:
-	pdflatex -interaction=nonstopmode main.tex out.pdf 
-	pdflatex -interaction=nonstopmode main.tex out.pdf # to build reference index
+	pdflatex -interaction=nonstopmode main.tex
+	bibtex main
+	pdflatex -interaction=nonstopmode main.tex 
+	pdflatex -interaction=nonstopmode main.tex # to build reference index
 
 generate_figures:
 	bash ./scripts/convert-images.sh
